@@ -1,3 +1,8 @@
+tokenapi:
+    certsign:      OpenXPKI::Crypto::Backend::API
+    datasafe:      OpenXPKI::Crypto::Backend::API
+    scep:          OpenXPKI::Crypto::Tool::SCEP::API
+    
 # System wide token (non key based tokens)
 token:
     default:
@@ -14,6 +19,10 @@ token:
 
         # random file to use for OpenSSL
         randfile: /var/openxpki/rand
+
+    pkcs7:
+        backend: OpenXPKI::Crypto::Tool::PKCS7
+        api: OpenXPKI::Crypto::Tool::PKCS7::API
 
     javaks:
         backend: OpenXPKI::Crypto::Tool::CreateJavaKeystore

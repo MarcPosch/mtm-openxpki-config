@@ -5,7 +5,7 @@ main:
     host: localhost
     port: 3306
     user: openxpki
-    passwd: openxpki
+    passwd: ##mtm-replace-db-password-here##
 
     # extra options passed to the driver as parameter
     #driver:
