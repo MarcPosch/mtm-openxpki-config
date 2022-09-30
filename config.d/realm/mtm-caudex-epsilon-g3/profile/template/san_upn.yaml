@@ -1,0 +1,8 @@
+#this might need partial rollback of commit: https://github.com/openxpki/openxpki/commit/230bc37dfcf30586c98d58a66d96c32ea69e1796
+id: upn
+label: I18N_OPENXPKI_UI_PROFILE_SAN_UPN
+description: I18N_OPENXPKI_UI_PROFILE_SAN_UPN_DESCRIPTION
+type: freetext
+width: 40
+min: 0
+max: 20
