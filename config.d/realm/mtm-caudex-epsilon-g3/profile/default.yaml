@@ -107,7 +107,7 @@ extensions:
         # this is the globally defined "any policy"
         # oid: 2.5.29.32.0
         # for OIDs with CPS/Notice, put the OID as key.
-        1.3.6.1.4.1.65535.4711.815.3.1
+        1.3.6.1.4.1.65535.4711.815.3.1:
           # CPS/Notice can be scalar or list
           cps:
             - http://crl.metamorph.ws/certdata/policy/MetamorphG3V1.html
