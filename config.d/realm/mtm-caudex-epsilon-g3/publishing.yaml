@@ -38,13 +38,13 @@ connectors:
     local:
         class: Connector::Builtin::File::Path
         LOCATION: /tmp/
-        file: "[% ARGS.0.replace('[^\\w-]','_') %].crt"
+        file: "[% ARGS.0.replace('[^\\w-]','') %].crt"
         content: "[% pem %]"
 
     cdp:
         class: Connector::Builtin::File::Path
         LOCATION: /var/www/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','_') %].crl"
+        file: "[% ARGS.0.replace('[^\\w-]','') %].crl"
         content: "[% der %]"
     
     cdp-scp:
@@ -52,13 +52,13 @@ connectors:
         identity: /home/pkiadm/id_ecdsa_pkiadm
         LOCATION: pkiadm@kortirion
         path: /inetpub/wwwroot/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','_') %].crl"
+        file: "[% ARGS.0.replace('[^\\w-]','') %].crl"
         content: "[% der %]"
 
     cacert-pem:
         class: Connector::Builtin::File::Path
         LOCATION: /var/www/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','_') %].crt"
+        file: "[% ARGS.0.replace('[^\\w-]','') %].crt"
         content: "[% pem %]"
 
     cacert-pem-scp:
@@ -66,13 +66,13 @@ connectors:
         identity: /home/pkiadm/id_ecdsa_pkiadm
         LOCATION: pkiadm@kortirion
         path: /inetpub/wwwroot/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','_') %].crt"
+        file: "[% ARGS.0.replace('[^\\w-]','') %].crt"
         content: "[% pem %]"
 
     cacert-der:
         class: Connector::Builtin::File::Path
         LOCATION: /var/www/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','_') %].cer"
+        file: "[% ARGS.0.replace('[^\\w-]','') %].cer"
         content: "[% der %]"
 
     cacert-der-scp:
@@ -80,5 +80,5 @@ connectors:
         identity: /home/pkiadm/id_ecdsa_pkiadm
         LOCATION: pkiadm@kortirion
         path: /inetpub/wwwroot/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','_') %].cer"
+        file: "[% ARGS.0.replace('[^\\w-]','') %].cer"
         content: "[% der %]"
