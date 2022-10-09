@@ -93,11 +93,11 @@ extensions:
     crl_distribution_points:
         critical: 0
         uri:
-            - http://crl.metamorph.ws/certdata/[% ISSUER.CN.0.replace(' ','_') %].crl
+            - http://crl.metamorph.ws/certdata/[% ISSUER.CN.0.replace(' ','') %].crl
 
     authority_info_access:
         critical: 0
-        ca_issuers: http://crl.metamorph.ws/certdata/[% ISSUER.CN.0.replace(' ','_') %].crt
+        ca_issuers: http://crl.metamorph.ws/certdata/[% ISSUER.CN.0.replace(' ','') %].crt
         ocsp: http://ocsp.metamorph.ws/ocsp
 
     policy_identifier:
