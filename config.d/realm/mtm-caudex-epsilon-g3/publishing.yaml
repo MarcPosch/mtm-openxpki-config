@@ -52,7 +52,7 @@ connectors:
         identity: /home/pkiadm/id_ecdsa_pkiadm
         LOCATION: pkiadm@kortirion
         path: /inetpub/wwwroot/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','') %].crl"
+        file: "[% ISSUER.CN.0.replace(' ','') %].crl"
         content: "[% der %]"
 
     cacert-pem:
@@ -66,7 +66,7 @@ connectors:
         identity: /home/pkiadm/id_ecdsa_pkiadm
         LOCATION: pkiadm@kortirion
         path: /inetpub/wwwroot/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','') %].crt"
+        file: "[% ISSUER.CN.0.replace(' ','') %].crt"
         content: "[% pem %]"
 
     cacert-der:
@@ -80,5 +80,5 @@ connectors:
         identity: /home/pkiadm/id_ecdsa_pkiadm
         LOCATION: pkiadm@kortirion
         path: /inetpub/wwwroot/certdata/
-        file: "[% ARGS.0.replace('[^\\w-]','') %].cer"
+        file: "[% ISSUER.CN.0.replace(' ','') %].cer"
         content: "[% der %]"
