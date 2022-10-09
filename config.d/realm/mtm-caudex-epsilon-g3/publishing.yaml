@@ -50,9 +50,8 @@ connectors:
     cdp-scp:
         class: Connector::Builtin::File::SCP
         identity: /home/pkiadm/id_ecdsa_pkiadm
-        LOCATION: pkiadm@kortirion
-        path: /inetpub/wwwroot/certdata/
-        file: "[% ISSUER.CN.0.replace(' ','') %].crl"
+        LOCATION: pkiadm@kortirion:/inetpub/wwwroot/certdata/
+        file: "[% ARGS.0.replace('[^\\w-]','') %].crl"
         content: "[% der %]"
 
     cacert-pem:
@@ -64,9 +63,8 @@ connectors:
     cacert-pem-scp:
         class: Connector::Builtin::File::SCP
         identity: /home/pkiadm/id_ecdsa_pkiadm
-        LOCATION: pkiadm@kortirion
-        path: /inetpub/wwwroot/certdata/
-        file: "[% ISSUER.CN.0.replace(' ','') %].crt"
+        LOCATION: pkiadm@kortirion:/inetpub/wwwroot/certdata/
+        file: "[% ARGS.0.replace('[^\\w-]','') %].crt"
         content: "[% pem %]"
 
     cacert-der:
@@ -78,7 +76,6 @@ connectors:
     cacert-der-scp:
         class: Connector::Builtin::File::SCP
         identity: /home/pkiadm/id_ecdsa_pkiadm
-        LOCATION: pkiadm@kortirion
-        path: /inetpub/wwwroot/certdata/
-        file: "[% ISSUER.CN.0.replace(' ','') %].cer"
+        LOCATION: pkiadm@kortirion:/inetpub/wwwroot/certdata/
+        file: "[% ARGS.0.replace('[^\\w-]','') %].cer"
         content: "[% der %]"
