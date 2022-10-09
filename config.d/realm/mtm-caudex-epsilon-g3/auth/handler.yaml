@@ -12,8 +12,8 @@ System:
 # the commonName is used as username!
 Certificate:
     type: ClientX509
-    role: User
-    arg: CN
+    arg: userID
+    user@: connector:auth.connector.userdb
     trust_anchor:
         realm: mtm-caudex-epsilon-g3
 
