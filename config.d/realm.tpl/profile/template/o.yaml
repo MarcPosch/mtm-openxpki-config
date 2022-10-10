@@ -4,4 +4,5 @@ description: I18N_OPENXPKI_UI_PROFILE_O_DESC
 preset: O
 type: text
 width: 40
+required: 0
 placeholder: OpenXPKI Inc.

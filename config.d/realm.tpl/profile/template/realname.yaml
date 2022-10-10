@@ -4,5 +4,6 @@ description: I18N_OPENXPKI_UI_PROFILE_REALNAME_DESC
 type: text
 match: .+
 width: 40
+required: 0
 placeholder: John Doe
 preset: userinfo.realname
