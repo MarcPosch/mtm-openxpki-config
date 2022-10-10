@@ -34,7 +34,7 @@ style:
         ui:
             subject:
                 - cn
-                - uid
+                - username
                 - ou
                 - o
                 - dc
@@ -44,7 +44,7 @@ style:
             info:
                 - comment
         subject:
-            dn: CN=[% IF CN AND UID %]CN=[% CN %]+UID=[% UID %][% ELSE %][% IF CN %]CN=[% CN %][% END %][% IF UID %]UID=[% UID %][% END %][% END %][% IF OU %][% FOREACH entry = OU %],OU=[% entry %][% END %][% END %][% IF O %],O=[% O %][% END %][% FOREACH entry = DC %],DC=[% entry %][% END %][% IF C %],C=[% C %][% END %]
+            dn: CN=[% IF CN AND USERNAME %]CN=[% CN %]+UID=[% USERNAME %][% ELSE %][% IF CN %]CN=[% CN %][% END %][% IF USERNAME %]UID=[% USERNAME %][% END %][% END %][% IF OU %][% FOREACH entry = OU %],OU=[% entry %][% END %][% END %][% IF O %],O=[% O %][% END %][% FOREACH entry = DC %],DC=[% entry %][% END %][% IF C %],C=[% C %][% END %]
             # no san definitions here as items from ui.san are directly written to the SAN
 
 
