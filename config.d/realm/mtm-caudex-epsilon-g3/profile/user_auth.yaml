@@ -28,6 +28,25 @@ style:
             email: "[% email %]"
             department: "[% department %]"
 
+        05_advanced_style:
+            label: I18N_OPENXPKI_UI_PROFILE_ADVANCED_STYLE_LABEL
+            description: I18N_OPENXPKI_UI_PROFILE_ADVANCED_STYLE_DESC
+            ui:
+                subject:
+                    - cn
+                    - uid
+                    - ou
+                    - o
+                    - dc
+                    - c
+                san:
+                    - san_upn
+                info:
+                    - comment
+            subject:
+                dn: CN=[% IF CN AND UID %]CN=[% CN %]+UID=[% UID %][% ELSE %][% IF CN %]CN=[% CN %][% END %][% IF UID %]UID=[% UID %][% END %][% END %][% IF OU %][% FOREACH entry = OU %],OU=[% entry %][% END %][% END %][% IF O %],O=[% O %][% END %][% FOREACH entry = DC %],DC=[% entry %][% END %][% IF C %],C=[% C %][% END %]
+                # no san definitions here as items from ui.san are directly written to the SAN
+
 # Profile extensions - set 0/1 as needed
 # Also see sections defined in default.yaml
 extensions:
