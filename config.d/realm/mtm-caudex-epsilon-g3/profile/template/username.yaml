@@ -4,5 +4,6 @@ description: I18N_OPENXPKI_UI_PROFILE_USERNAME_DESC
 type: text
 match: \A [A-Za-z0-9\.]+ \z
 width: 20
+required: 0
 placeholder: anonymous
 preset: userinfo.username
