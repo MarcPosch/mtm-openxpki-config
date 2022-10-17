@@ -44,7 +44,7 @@ style:
             info:
                 - comment
         subject:
-            dn: [% IF realname AND username %]CN=[% realname %]+UID=[% username %][% ELSE %][% IF realname %]CN=[% realname %][% END %][% IF username %]UID=[% username %][% END %][% END %][% IF OU %][% FOREACH entry = OU %],OU=[% entry %][% END %][% END %][% IF O %],O=[% O %][% END %][% FOREACH entry = DC %],DC=[% entry %][% END %][% IF C %],C=[% C %][% END %]
+            dn: CN=[% IF realname AND username %][% realname %]+UID=[% username %][% ELSE %][% IF realname %][% realname %][% END %][% IF username %][% username %][% END %][% END %][% IF OU %][% FOREACH entry = OU %],OU=[% entry %][% END %][% END %][% IF O %],O=[% O %][% END %][% FOREACH entry = DC %],DC=[% entry %][% END %][% IF C %],C=[% C %][% END %]
             # no san definitions here as items from ui.san are directly written to the SAN
 
 # Profile extensions - set 0/1 as needed
